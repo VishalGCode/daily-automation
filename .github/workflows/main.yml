@@ -31,4 +31,4 @@ jobs:
           user-name: ${{ secrets.USER_NAME }}
           user-email: ${{ secrets.USER_EMAIL }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          branch-name: "main"
+          #branch-name: "main"
