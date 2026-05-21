@@ -28,7 +28,7 @@ jobs:
           min-commits: 2
           max-commits: 5
           commit-message: "daily streak"
-          user-name: ${{ secrets.GITHUB_USER_NAME }}
-          user-email: ${{ secrets.GITHUB_USER_EMAIL }}
+          user-name: ${{ secrets.USER_NAME }}
+          user-email: ${{ secrets.USER_EMAIL }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           branch-name: "main"
