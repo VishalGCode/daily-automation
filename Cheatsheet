@@ -1,0 +1,35 @@
+document.querySelector("#QuestionOptions")
+let dq = document.querySelector.bind(document);
+let dqa = document.querySelectorAll.bind(document);
+let cl = console.log
+function sleep(ms) {
+    return new Promise(
+        resolve => setTimeout(resolve, ms)
+        )
+}
+function selectOption(option) {
+    const b = document.querySelector("#QuestionOptions")
+    if (b == null)
+        cl("b is null")
+    if (b == null)
+        return null
+    // const b = document.querySelector("#QuestionOptions > table")
+    for (i of b.querySelectorAll("tr")) {
+        if (i.innerText.trim() == option.toUpperCase()) {
+            cl("ok"); i.querySelector("#ans").click()
+        }
+    }
+}
+let ques = [];
+// give answers as js array use varname ans with declaration single line and give correct answers one line
+var ans=["A","C","C","D","C","A","C","D","C","A","B","D","B","C","C","A"];
+for (const char of ans) {
+    console.log(char);
+    selectOption(char); // or 'B', 'C', 'D'
+    ques.push(dq("#Question").innerText)
+    // await sleep(1)
+    // document.querySelector("#btnSaveAndNext").click()
+    window.parent.a.next('SAVE');
+    // await sleep(1)
+}
+ 
